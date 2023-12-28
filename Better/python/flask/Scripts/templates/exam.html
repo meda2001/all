@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam - {{ topic }}</title>
+</head>
+<body>
+    <h1>{{ topic }} Exam</h1>
+    {% if question_number is defined %}
+        <p>Question {{ question_number + 1 }}:</p>
+        <p>{{ question.question }}</p>
+        <form method="post" action="{{ url_for('exam_portal') }}">
+            {{ form.csrf_token }}
+            {{ form.answer.label }} {{ form.answer }}
+            {{ form.next_question }}
+        </form>
+    {% else %}
+        <p>No question available. Please start the exam from the beginning.</p>
+    {% endif %}
+</body>
+</html>

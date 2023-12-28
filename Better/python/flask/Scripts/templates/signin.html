@@ -1,0 +1,18 @@
+<!-- templates/signin.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam - Sign In</title>
+</head>
+<body>
+    <h1>Sign In</h1>
+    <form method="post" action="{{ url_for('signin') }}">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username }}
+        {{ form.password.label }} {{ form.password }}
+        {{ form.submit }}
+    </form>
+</body>
+</html>

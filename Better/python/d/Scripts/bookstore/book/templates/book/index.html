@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store</title>
+    <!-- Add the Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the grid */
+        .book-card {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .book-thumbnail {
+            max-width: 50%;
+            height: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Book Store</h1>
+        <div class="row mt-4">
+            {% for book in books %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="card book-card">
+                        {% if book.thumbnail_url %}
+                            <img src="{{ book.thumbnail_url }}" alt="{{ book.title }} Thumbnail" class="book-thumbnail">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ book.title }}</h5>
+                            <p class="card-text">
+                                <strong>Author:</strong> {{ book.author }}<br>
+                                <strong>Publication Date:</strong> {{ book.publication_date }}<br>
+                                <strong>Price:</strong> ${{ book.price }}<br>
+                                <strong>Stock Quantity:</strong> {{ book.stock_quantity }}<br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Add the Bootstrap JavaScript and jQuery libraries (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

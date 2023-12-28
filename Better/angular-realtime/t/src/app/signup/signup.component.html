@@ -1,0 +1,43 @@
+<div class="container border border-dark p-1 w-25 mt-2">
+    <h3 class="text-center text-dark p-2">Sign Up</h3>
+    <form class="form p-3"  [formGroup]="signUp" (ngSubmit)="onSubmit()"  >
+        <div class="mb-3">
+            <input type="text" name="name" id="name" formControlName="name" class="form-control border-warning text-dark " placeholder="Name">
+        </div>
+
+        <div class="mb-3">
+            <input type="email" name="email" id="email" formControlName="email" class="form-control border-warning text-dark " placeholder="Email">
+        </div>
+
+        <div class="mb-3">
+            <input type="email" name="cemail" id="cemail" formControlName="cemail" class="form-control border-warning text-dark " placeholder="Confrom Email">
+        </div>
+
+        <div class="mb-3">
+            <input type="password" name="password" id="password" formControlName="password" class="form-control border-warning text-dark " placeholder="Password">
+        </div>
+
+        <div class="mb-3">
+            <input type="password" name="name" id="cpassword" formControlName="cpassword" class="form-control border-warning text-dark " placeholder="Confrom password">
+        </div>
+
+        <div class="mb-3 text-center">
+            <input type="submit" value="Signup" class="btn btn-small btn-primary">
+            <span class="p-1"></span>
+            <input type="reset" value="Reset" class="btn btn-small btn-danger"  (click)="Reset()" >
+        </div>
+
+        <div class="mb-3 text-center">
+
+            <!-- <a routerLink="/login"> <button class="btn btn-success w-75" >Login</button></a> -->
+
+            <button class="btn btn-success w-75" (click)="login()" >Login</button>
+            
+        </div>
+
+
+
+
+    </form>
+
+</div>

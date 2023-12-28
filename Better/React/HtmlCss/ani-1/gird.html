@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 2px black solid;
+            margin: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+ 
+            
+            
+        }
+        .container{
+            border: 2px black solid;
+            
+            align-items: center; 
+            margin: 5px;
+            height: 100px;
+            width: 100px;
+            animation: changeColor 5s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes  changeColor {
+
+25%{
+    background-color: red;
+}
+50%{
+    background-color: green;
+}
+100%{
+    background-color: blue;
+}
+
+}
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+
+    
+</body>
+</html>

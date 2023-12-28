@@ -1,0 +1,18 @@
+<!-- templates/signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam - Sign Up</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form method="post" action="{{ url_for('signup') }}">
+        {{ form.csrf_token }}
+        {{ form.username.label }} {{ form.username }}
+        {{ form.password.label }} {{ form.password }}
+        {{ form.submit }}
+    </form>
+</body>
+</html>
